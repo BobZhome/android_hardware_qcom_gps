@@ -1300,7 +1300,7 @@ static void loc_eng_report_nmea(const rpc_loc_nmea_report_s_type *nmea_report_pt
       gettimeofday(&tv, (struct timezone *) NULL);
       long long now = tv.tv_sec * 1000LL + tv.tv_usec / 1000;
 
-#if (AMSS_VERSION==3200||AMSS_VERSION==20000||AMSS_version==6225)
+#if (AMSS_VERSION==3200||AMSS_VERSION==20000||AMSS_VERSION==6225)
       loc_eng_data.nmea_cb(now, nmea_report_ptr->nmea_sentences.nmea_sentences_val,
             nmea_report_ptr->nmea_sentences.nmea_sentences_len);
 #else
